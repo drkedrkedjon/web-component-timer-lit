@@ -9,6 +9,21 @@ const divGrandChild = document.getElementById("grand-child");
 const divChild = document.getElementById("child");
 const divFather = document.getElementById("father");
 
+// Crear un contexto global
+window.myContext = {
+  _name: "Sasha",
+
+  set name(value) {
+    this._name = value;
+    document.dispatchEvent(new Event("contextChanged"));
+    // Esta parte de seter geter y event es para estado global que pide en la prueba
+  },
+
+  get name() {
+    return this._name;
+  },
+};
+
 // Crear un evento personalizado
 const bublingEvent = new Event("bublingEvent", {
   // bubbles: true,
@@ -24,7 +39,6 @@ hiddenDiv.setAttribute("id", "hidden-div");
 hiddenDiv.style.padding = "1rem";
 hiddenDiv.style.backgroundColor = "red";
 hiddenDiv.style.color = "white";
-hiddenDiv.textContent = "Hidden Div";
 hiddenShadow.appendChild(hiddenDiv);
 
 // Agregar el evento a los botones. Lo comentado es si quieres que padre dispara evento en lugar de hijo pero esta hijo en shadowDOM y el padre en el DOM y tienes tanto bubbles y composed en false.
@@ -58,6 +72,14 @@ divFather.addEventListener("bublingEvent", (e) => {
 hiddenDiv.addEventListener("bublingEvent", (e) => {
   console.log("Hidden Div", e.target);
 });
+
+// Renderizar context en hiddenDiv
+function renderContext() {
+  hiddenDiv.textContent = myContext.name;
+}
+renderContext();
+
+document.addEventListener("contextChanged", renderContext);
 
 // document.addEventListener("bublingEvent", (e) => {
 //   alert("Document");
