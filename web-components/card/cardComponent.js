@@ -20,7 +20,7 @@ export class CardComponent extends LitElement {
     }
   `;
   render() {
-    this.bolea ? console.log("verdadero") : console.log("falso");
+    // this.bolea ? console.log("verdadero") : console.log("falso");
     return html`<div class="card">
       <h1>${this.title}</h1>
       <p>

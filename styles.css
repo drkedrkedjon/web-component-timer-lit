@@ -5,6 +5,7 @@
 }
 :root {
   --card-background-color: #666;
+  --btn-primary-background-color: pink;
 }
 
 html,
