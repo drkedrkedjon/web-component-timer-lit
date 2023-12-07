@@ -1,0 +1,21 @@
+{
+  "name": "web-component-timer-lit",
+  "version": "1.0.0",
+  "description": "Lit Web Component",
+  "main": "script.js",
+  "type": "module",
+  "module": "script.js",
+  "exports": {
+    ".": "./script.js"
+  },
+  "scripts": {
+    "start": "web-dev-server --node-resolve --watch --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.4.1",
+    "lit": "^3.1.0"
+  }
+}

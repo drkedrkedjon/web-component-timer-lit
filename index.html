@@ -15,20 +15,20 @@
       type="module"
       src="./bubling/bubling-js.js"
     ></script>
+
     <script
       type="module"
-      src="./context/context.js"
+      src="./script.js"
     ></script>
   </head>
   <body>
     <div class="container">
       <h1>Vanilla Web Component</h1>
       <button id="btn-hidden-div">Hidden DIV</button>
-      <div class="form-container">        
+      <div class="form-container">
         <div id="father">
           <div id="child">
-            <div id="grand-child">
-            </div>
+            <div id="grand-child"></div>
           </div>
         </div>
       </div>
@@ -36,16 +36,23 @@
       <button id="btn-grand-child">Click Grand Child</button>
       <button id="btn-child">Click Child</button>
       <button id="btn-father">Click Father</button>
-    </body>
-    </html>
 
-    
-    <!-- Test creacion de web component -->
-    <!-- <script
-      type="module"
-      src="./web-components/button-component/button-component.js"
-    ></script> -->
-    <!-- <mi-button
-      id="test-boolean"
-      btn-text="Daleeeeee..."
-    ></mi-button> -->
+      <br /><br />
+      <!-- LIT BASED WEB COMPONENT -->
+      <card-component
+        bolea
+        title="Card component"
+      ></card-component>
+
+      <!-- Test creacion de web component -->
+      <!-- <script
+        type="module"
+        src="./web-components/button-component/button-component.js"
+      ></script>
+      <mi-button
+        id="test-boolean"
+        btn-text="Daleeeeee..."
+      ></mi-button> -->
+    </div>
+  </body>
+</html>
