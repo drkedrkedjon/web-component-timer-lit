@@ -34,8 +34,8 @@ export class LitComponent extends LitElement {
       color: var(--btn-color, #999);
     }
     .btn-secondary {
-      background-color: var(--btn-background-color, #999);
-      color: var(--btn-color, #333);
+      background-color: var(--btn-background-color, #666);
+      color: var(--btn-color, #999);
     }
   `;
   render() {
